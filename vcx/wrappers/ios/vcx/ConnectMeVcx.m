@@ -680,8 +680,8 @@ void VcxWrapperCommonNumberStringCallback(vcx_command_handle_t xcommand_handle,
    }
 }
 
-- (void)deleteCredential:(VcxHandle)credentialHandle
-          withCompletion:(void (^)(NSError *error))completion
+- (void)deleteCredential:(NSInteger)credentialHandle
+          completion:(void (^)(NSError *error))completion
 {
     vcx_command_handle_t handle= [[VcxCallbacks sharedInstance] createCommandHandleFor:completion];
     vcx_error_t ret = vcx_delete_credential(handle, credentialHandle, VcxWrapperCommonCallback);

@@ -351,7 +351,7 @@ vcx_error_t vcx_credential_deserialize(vcx_command_handle_t, const char *seriali
 vcx_error_t vcx_credential_release(vcx_credential_handle_t credential_handle);
 
 /** Delete the credential from the wallet. */
-vcx_error_t vcx_delete_credential(vcx_command_handle_t command_handle, vcx_credential_handle_t credential_handle, void (*cb)(vcx_command_handle_t, vcx_error_t err));
+vcx_error_t vcx_delete_credential(vcx_command_handle_t command_handle, vcx_credential_handle_t credential_handle, void (*cb)(vcx_command_handle_t xcommand_handle, vcx_error_t err));
 
 /**
  * wallet object
